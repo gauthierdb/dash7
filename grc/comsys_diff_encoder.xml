@@ -1,0 +1,25 @@
+<block>
+  <name>Diff encoder</name>
+  <key>comsys_diff_encoder</key>
+  <category>[COMSYS]</category>
+  <import>import comsys</import>
+  <make>comsys.diff_encoder($modulus, $initial_state)</make>
+  <param>
+    <name>Modulus</name>
+    <key>modulus</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Initial_state</name>
+    <key>initial_state</key>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

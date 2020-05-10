@@ -1,0 +1,25 @@
+<block>
+  <name>Crc tagged stream</name>
+  <key>comsys_crc_tagged_stream</key>
+  <category>[COMSYS]</category>
+  <import>import comsys</import>
+  <make>comsys.crc_tagged_stream($check, $tag)</make>
+  <param>
+    <name>Check</name>
+    <key>check</key>
+    <type>bool</type>
+  </param>
+  <param>
+    <name>Tag</name>
+    <key>tag</key>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

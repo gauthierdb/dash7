@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1comsys_1_1diff__encoder" kind="class" language="C++" prot="public">
+    <compoundname>gr::comsys::diff_encoder</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <includes refid="diff__encoder_8h" local="no">diff_encoder.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1comsys_1_1diff__encoder_1a469dce0af8d34b43bf202e2ff3800ad6" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1comsys_1_1diff__encoder" kindref="compound">diff_encoder</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;diff_encoder&gt; gr::comsys::diff_encoder::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/diff_encoder.h" line="39" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/diff_encoder.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1comsys_1_1diff__encoder_1a8effe7f73a6cf2a5fa0c30249c2e88fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1comsys_1_1diff__encoder_1a469dce0af8d34b43bf202e2ff3800ad6" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::comsys::diff_encoder::make</definition>
+        <argsstring>(unsigned int modulus, unsigned char initial_state)</argsstring>
+        <name>make</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>initial_state</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1comsys_1_1diff__encoder" kindref="compound">comsys::diff_encoder</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1comsys_1_1diff__encoder" kindref="compound">comsys::diff_encoder</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1comsys_1_1diff__encoder_1a8effe7f73a6cf2a5fa0c30249c2e88fd" kindref="member">comsys::diff_encoder::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/diff_encoder.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>gr::comsys::diff_encoder</label>
+        <link refid="classgr_1_1comsys_1_1diff__encoder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::comsys::diff_encoder</label>
+        <link refid="classgr_1_1comsys_1_1diff__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/diff_encoder.h" line="37" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/diff_encoder.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1comsys_1_1diff__encoder_1a8effe7f73a6cf2a5fa0c30249c2e88fd" prot="public" virt="non-virtual"><scope>gr::comsys::diff_encoder</scope><name>make</name></member>
+      <member refid="classgr_1_1comsys_1_1diff__encoder_1a469dce0af8d34b43bf202e2ff3800ad6" prot="public" virt="non-virtual"><scope>gr::comsys::diff_encoder</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
