@@ -3,6 +3,7 @@ clone this repo
 cd inside dash7/ 
 execute the following commands: 
 
+apt-get install swig
 mkdir build 
 cd build 
 cmake ../
