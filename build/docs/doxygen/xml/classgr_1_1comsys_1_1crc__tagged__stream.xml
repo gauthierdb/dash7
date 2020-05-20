@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1comsys_1_1crc__tagged__stream" kind="class" language="C++" prot="public">
+    <compoundname>gr::comsys::crc_tagged_stream</compoundname>
+    <basecompoundref prot="public" virt="virtual">tagged_stream_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1comsys_1_1crc__tagged__stream__impl" prot="public" virt="non-virtual">gr::comsys::crc_tagged_stream_impl</derivedcompoundref>
+    <includes refid="crc__tagged__stream_8h" local="no">crc_tagged_stream.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1comsys_1_1crc__tagged__stream_1a66a9efd75036f6702793c0b185925d44" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1comsys_1_1crc__tagged__stream" kindref="compound">crc_tagged_stream</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;crc_tagged_stream&gt; gr::comsys::crc_tagged_stream::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/crc_tagged_stream.h" line="39" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/crc_tagged_stream.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream_1a1ca14cd181e55b875a2d2f68d2f18ac1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1comsys_1_1crc__tagged__stream_1a66a9efd75036f6702793c0b185925d44" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::comsys::crc_tagged_stream::make</definition>
+        <argsstring>(bool check, const std::string &amp;tag)</argsstring>
+        <name>make</name>
+        <param>
+          <type>bool</type>
+          <declname>check</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1comsys_1_1crc__tagged__stream" kindref="compound">comsys::crc_tagged_stream</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1comsys_1_1crc__tagged__stream" kindref="compound">comsys::crc_tagged_stream</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1comsys_1_1crc__tagged__stream_1a1ca14cd181e55b875a2d2f68d2f18ac1" kindref="member">comsys::crc_tagged_stream::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/crc_tagged_stream.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::tagged_stream_block</label>
+      </node>
+      <node id="0">
+        <label>gr::comsys::crc_tagged_stream</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::comsys::crc_tagged_stream_impl</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream__impl"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>gr::tagged_stream_block</label>
+      </node>
+      <node id="3">
+        <label>gr::comsys::crc_tagged_stream</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/crc_tagged_stream.h" line="37" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/include/comsys/crc_tagged_stream.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream_1a1ca14cd181e55b875a2d2f68d2f18ac1" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream</scope><name>make</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream_1a66a9efd75036f6702793c0b185925d44" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

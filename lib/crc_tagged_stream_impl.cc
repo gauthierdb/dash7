@@ -98,7 +98,7 @@ namespace gr {
 
            d_crc_impl.process_bytes(in, packet_length - d_crc_length);
            crc = calculate_crc16(in, packet_length - d_crc_length);
-
+           /*
            cout<<"----------- Checking CRC values -------------"<<std::endl;
            cout<<"input char array"<<std::endl;
            cout<<in<<std::endl;
@@ -113,17 +113,17 @@ namespace gr {
            cout<<"which should be identical with the current crc. Here they are printed side by side"<<std::endl;
            cout<<bitset<16>(crc)<<std::endl;
            cout<<bitset<16>(*(unsigned short*)(in + packet_length - d_crc_length))<<std::endl;
-
+           */
            if(crc != *(unsigned short*)(in + packet_length - d_crc_length)){
-                cout<<"They are not identical. Packet dropped!"<<std::endl;
+                //cout<<"They are not identical. Packet dropped!"<<std::endl;
                 return 0;
             }
 
         }
         memcpy( (void*)out, (const void*)in, packet_length - d_crc_length);
-        cout<<"They are identical! transmitting the following packet"<<std::endl;
-        cout<<out<<std::endl;
-        cout<<"-------------------------------------------------------"<<std::endl;
+        //cout<<"They are identical! transmitting the following packet"<<std::endl;
+        //cout<<out<<std::endl;
+        //cout<<"-------------------------------------------------------"<<std::endl;
 
       }else{
         crc = calculate_crc16(in, packet_length);

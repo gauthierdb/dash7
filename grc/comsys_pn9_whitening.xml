@@ -4,12 +4,20 @@
   <key>comsys_pn9_whitening</key>
   <category>[comsys]</category>
   <import>import comsys</import>
-  <make>comsys.pn9_whitening()</make>
+  <make>comsys.pn9_whitening($verbose)</make>
+
+  <param>
+    <name>Verbose</name>
+    <key>verbose</key>
+    <type>bool</type>
+  </param>
 
   <sink>
     <name>in</name>
     <type>byte</type>
   </sink>
+
+
 
   <source>
     <name>out</name>

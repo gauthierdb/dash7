@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sun May 10 20:18:09 2020
+# Generated: Wed May 20 12:15:59 2020
 ##################################################
 
 from distutils.version import StrictVersion
@@ -68,12 +68,11 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self.comsys_pn9_whitening_0_0 = comsys.pn9_whitening()
-        self.comsys_pn9_whitening_0 = comsys.pn9_whitening()
+        self.comsys_pn9_whitening_0_0 = comsys.pn9_whitening(False)
+        self.comsys_pn9_whitening_0 = comsys.pn9_whitening(False)
         self.comsys_crc_tagged_stream_0_0 = comsys.crc_tagged_stream(True, "packet_len")
         self.comsys_crc_tagged_stream_0 = comsys.crc_tagged_stream(False, "packet_len")
-        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(list(ord(i) for i in '123456789'), False, 1, [])
-        self.blocks_tag_debug_0 = blocks.tag_debug(gr.sizeof_char*1, '', ""); self.blocks_tag_debug_0.set_display(True)
+        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(list(ord(i) for i in '123456789'), True, 1, [])
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, 9, "packet_len")
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/dev/pts/0', False)
         self.blocks_file_sink_0.set_unbuffered(True)
@@ -83,10 +82,8 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.comsys_crc_tagged_stream_0, 0))
         self.connect((self.blocks_vector_source_x_0_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
-        self.connect((self.comsys_crc_tagged_stream_0, 0), (self.blocks_tag_debug_0, 0))
         self.connect((self.comsys_crc_tagged_stream_0, 0), (self.comsys_pn9_whitening_0_0, 0))
         self.connect((self.comsys_crc_tagged_stream_0_0, 0), (self.blocks_file_sink_0, 0))
-        self.connect((self.comsys_crc_tagged_stream_0_0, 0), (self.blocks_tag_debug_0, 1))
         self.connect((self.comsys_pn9_whitening_0, 0), (self.comsys_crc_tagged_stream_0_0, 0))
         self.connect((self.comsys_pn9_whitening_0_0, 0), (self.comsys_pn9_whitening_0, 0))
 

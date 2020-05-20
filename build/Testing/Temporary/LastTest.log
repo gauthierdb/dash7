@@ -1,0 +1,134 @@
+Start testing: May 10 21:25 CEST
+----------------------------------------------------------
+1/5 Testing: test_comsys
+1/5 Test: test_comsys
+Command: "/bin/sh" "/home/gauthier/ComSys_customBlocks/gr-comsys/build/lib/test_comsys_test.sh"
+Directory: /home/gauthier/ComSys_customBlocks/gr-comsys/build/lib
+"test_comsys" start time: May 10 21:25 CEST
+Output:
+----------------------------------------------------------
+
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_comsys" end time: May 10 21:25 CEST
+"test_comsys" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: qa_diff_encoder
+2/5 Test: qa_diff_encoder
+Command: "/bin/sh" "/home/gauthier/ComSys_customBlocks/gr-comsys/build/python/qa_diff_encoder_test.sh"
+Directory: /home/gauthier/ComSys_customBlocks/gr-comsys/build/python
+"qa_diff_encoder" start time: May 10 21:25 CEST
+Output:
+----------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"qa_diff_encoder" end time: May 10 21:25 CEST
+"qa_diff_encoder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: qa_diff_decoder
+3/5 Test: qa_diff_decoder
+Command: "/bin/sh" "/home/gauthier/ComSys_customBlocks/gr-comsys/build/python/qa_diff_decoder_test.sh"
+Directory: /home/gauthier/ComSys_customBlocks/gr-comsys/build/python
+"qa_diff_decoder" start time: May 10 21:25 CEST
+Output:
+----------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"qa_diff_decoder" end time: May 10 21:25 CEST
+"qa_diff_decoder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: qa_pn9_whitening
+4/5 Test: qa_pn9_whitening
+Command: "/bin/sh" "/home/gauthier/ComSys_customBlocks/gr-comsys/build/python/qa_pn9_whitening_test.sh"
+Directory: /home/gauthier/ComSys_customBlocks/gr-comsys/build/python
+"qa_pn9_whitening" start time: May 10 21:25 CEST
+Output:
+----------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"qa_pn9_whitening" end time: May 10 21:25 CEST
+"qa_pn9_whitening" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: qa_crc_tagged_stream
+5/5 Test: qa_crc_tagged_stream
+Command: "/bin/sh" "/home/gauthier/ComSys_customBlocks/gr-comsys/build/python/qa_crc_tagged_stream_test.sh"
+Directory: /home/gauthier/ComSys_customBlocks/gr-comsys/build/python
+"qa_crc_tagged_stream" start time: May 10 21:25 CEST
+Output:
+----------------------------------------------------------
+----------- Checking CRC values -------------
+input char array
+123456789±)
+crc of the input: 
+±)
+pointer to this crc:
+±
+converted to short & displayed as one digit, this becomes
+10673
+in binary, this is
+0010100110110001
+which should be identical with the current crc. Here they are printed side by side
+0010100110110001
+0010100110110001
+They are identical! transmitting the following packet
+123456789
+-------------------------------------------------------
+.----------- Checking CRC values -------------
+input char array
+123456789±)
+crc of the input: 
+±)
+pointer to this crc:
+±
+converted to short & displayed as one digit, this becomes
+10673
+in binary, this is
+0010100110110001
+which should be identical with the current crc. Here they are printed side by side
+0010100110110001
+0010100110110001
+They are identical! transmitting the following packet
+123456789
+-------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+OK
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Passed.
+"qa_crc_tagged_stream" end time: May 10 21:25 CEST
+"qa_crc_tagged_stream" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 10 21:25 CEST
