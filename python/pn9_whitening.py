@@ -99,8 +99,12 @@ class pn9_whitening(gr.sync_block):
             self.currentFrameLength = len(self.tags)
             self.endOfFrame = False
 
-        #else:
-            #print(" !!! Work function was called without the previous frame being done !!!")
+        else:
+            print(" !!! Work function was called without the previous frame being done !!!")
+            #TODO: we might have to check if there are new tags that came with this function call
+            self.tags = self.tags + self.get_tags_in_window(0,0,len(input_items[0]))
+            self.currentFrameLength = len(self.tags)
+
 
 
 
