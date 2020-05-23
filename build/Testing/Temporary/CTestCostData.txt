@@ -1,6 +1,0 @@
-test_comsys 5 0.000506367
-qa_diff_encoder 5 0.0799611
-qa_diff_decoder 5 0.0497845
-qa_pn9_whitening 10 0.0435133
-qa_crc_tagged_stream 5 0.0506811
----
