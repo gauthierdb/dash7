@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1comsys_1_1crc__tagged__stream__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::comsys::crc_tagged_stream_impl</compoundname>
+    <basecompoundref refid="classgr_1_1comsys_1_1crc__tagged__stream" prot="public" virt="non-virtual">gr::comsys::crc_tagged_stream</basecompoundref>
+    <includes refid="crc__tagged__stream__impl_8h" local="no">crc_tagged_stream_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1adf0f03908fbb7bd6fd8a7e4d30640a8d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::comsys::crc_tagged_stream_impl::d_check</definition>
+        <argsstring></argsstring>
+        <name>d_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="33" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a347f7222971884e6a8f556c84ab15a3e" prot="private" static="no" mutable="no">
+        <type>boost::crc_optimal&lt; 16, 0x1021, 0xFFFF, 0x0000, false, false &gt;</type>
+        <definition>boost::crc_optimal&lt;16, 0x1021, 0xFFFF, 0x0000, false, false&gt; gr::comsys::crc_tagged_stream_impl::d_crc_impl</definition>
+        <argsstring></argsstring>
+        <name>d_crc_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="34" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a12baaa18259f7a81da0b1e80dded12be" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::comsys::crc_tagged_stream_impl::d_crc_length</definition>
+        <argsstring></argsstring>
+        <name>d_crc_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="35" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a53e51263b6824b2c1d9c93fd6af926a7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt;char&gt; gr::comsys::crc_tagged_stream_impl::d_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="36" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1ad94fbb06bc126a0853bc506e0dd8bd41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short gr::comsys::crc_tagged_stream_impl::calculate_crc16</definition>
+        <argsstring>(const unsigned char *in, size_t packet_length)</argsstring>
+        <name>calculate_crc16</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>packet_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a6d12c0ee519f4622529fdf0117e94d4f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::comsys::crc_tagged_stream_impl::calculate_output_stream_length</definition>
+        <argsstring>(const gr_vector_int &amp;ninput_items)</argsstring>
+        <name>calculate_output_stream_length</name>
+        <param>
+          <type>const gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1aaa1e4107d1acd4c86ed6b657473a09bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::comsys::crc_tagged_stream_impl::crc_tagged_stream_impl</definition>
+        <argsstring>(bool check, const std::string &amp;tag)</argsstring>
+        <name>crc_tagged_stream_impl</name>
+        <param>
+          <type>bool</type>
+          <declname>check</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a6dfd445cd2618bdb777caa379025a777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::comsys::crc_tagged_stream_impl::~crc_tagged_stream_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~crc_tagged_stream_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a11b2ae4157ddc736dbfe7b28a48a36c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::comsys::crc_tagged_stream_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>gr::tagged_stream_block</label>
+      </node>
+      <node id="6">
+        <label>gr::comsys::crc_tagged_stream</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gr::comsys::crc_tagged_stream_impl</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream__impl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>gr::tagged_stream_block</label>
+      </node>
+      <node id="9">
+        <label>gr::comsys::crc_tagged_stream</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>gr::comsys::crc_tagged_stream_impl</label>
+        <link refid="classgr_1_1comsys_1_1crc__tagged__stream__impl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" line="31" column="1" bodyfile="/home/gauthier/ComSys_customBlocks/gr-comsys/lib/crc_tagged_stream_impl.h" bodystart="30" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1ad94fbb06bc126a0853bc506e0dd8bd41" prot="private" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>calculate_crc16</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a6d12c0ee519f4622529fdf0117e94d4f" prot="protected" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>calculate_output_stream_length</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1aaa1e4107d1acd4c86ed6b657473a09bb" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>crc_tagged_stream_impl</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a53e51263b6824b2c1d9c93fd6af926a7" prot="private" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>d_buffer</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1adf0f03908fbb7bd6fd8a7e4d30640a8d" prot="private" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>d_check</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a347f7222971884e6a8f556c84ab15a3e" prot="private" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>d_crc_impl</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a12baaa18259f7a81da0b1e80dded12be" prot="private" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>d_crc_length</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream_1a1ca14cd181e55b875a2d2f68d2f18ac1" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream_1a66a9efd75036f6702793c0b185925d44" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a11b2ae4157ddc736dbfe7b28a48a36c2" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1comsys_1_1crc__tagged__stream__impl_1a6dfd445cd2618bdb777caa379025a777" prot="public" virt="non-virtual"><scope>gr::comsys::crc_tagged_stream_impl</scope><name>~crc_tagged_stream_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -113,7 +113,7 @@ namespace gr {
            cout<<"which should be identical with the current crc. Here they are printed side by side"<<std::endl;
            cout<<bitset<16>(crc)<<std::endl;
            cout<<bitset<16>(*(unsigned short*)(in + packet_length - d_crc_length))<<std::endl;
-           */
+            */
            if(crc != *(unsigned short*)(in + packet_length - d_crc_length)){
                 //cout<<"They are not identical. Packet dropped!"<<std::endl;
                 return 0;
@@ -126,7 +126,10 @@ namespace gr {
         //cout<<"-------------------------------------------------------"<<std::endl;
 
       }else{
+        //cout<<"---input CRC----"<<endl;
+        //cout<<in<<endl;
         crc = calculate_crc16(in, packet_length);
+        //cout<<"CRC:"<<crc<<endl;
         //cout<<bitset<16>(crc)<<endl;
         //std::cout<< packet_length + packet_size_diff <<std::endl;
         memcpy((void*)out, (const void*)in, packet_length);

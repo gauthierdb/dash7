@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed May 20 12:15:59 2020
+# Generated: Sat May 23 18:43:56 2020
 ##################################################
 
 from distutils.version import StrictVersion
@@ -64,6 +64,7 @@ class top_block(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 32000
+        self.message = message = list(ord(i) for i in '123456789')
 
         ##################################################
         # Blocks
@@ -72,8 +73,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.comsys_pn9_whitening_0 = comsys.pn9_whitening(False)
         self.comsys_crc_tagged_stream_0_0 = comsys.crc_tagged_stream(True, "packet_len")
         self.comsys_crc_tagged_stream_0 = comsys.crc_tagged_stream(False, "packet_len")
-        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(list(ord(i) for i in '123456789'), True, 1, [])
-        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, 9, "packet_len")
+        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(message, True, 1, [])
+        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, len(message), "packet_len")
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/dev/pts/0', False)
         self.blocks_file_sink_0.set_unbuffered(True)
 
@@ -97,6 +98,15 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+
+    def get_message(self):
+        return self.message
+
+    def set_message(self, message):
+        self.message = message
+        self.blocks_vector_source_x_0_0.set_data(self.message, [])
+        self.blocks_stream_to_tagged_stream_0.set_packet_len(len(self.message))
+        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(len(self.message))
 
 
 def main(top_block_cls=top_block, options=None):

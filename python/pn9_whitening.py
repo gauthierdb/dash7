@@ -100,7 +100,7 @@ class pn9_whitening(gr.sync_block):
             self.endOfFrame = False
 
         else:
-            print(" !!! Work function was called without the previous frame being done !!!")
+            #print(" !!! Work function was called without the previous frame being done !!!")
             #TODO: we might have to check if there are new tags that came with this function call
             self.tags = self.tags + self.get_tags_in_window(0,0,len(input_items[0]))
             self.currentFrameLength = len(self.tags)
@@ -119,7 +119,6 @@ class pn9_whitening(gr.sync_block):
 
             #You reached the end of a frame, but you still know what the next frame is
             if(self.endOfFrame):
-
                 if(self.currentFrameIndex < self.currentFrameLength-1):
                     if(self.verbose):
                         print("Reached the end of frame " + str(self.currentFrameIndex) + " But there is a new frame of length " + str(pmt.to_python(self.tags[self.currentFrameIndex+1].value)))

@@ -32,13 +32,14 @@ class qa_pn9_whitening (gr_unittest.TestCase):
 
     def setUp (self):
         self.tb = gr.top_block ()
+        self.tsb_key = "packet_len"
+
 
     def tearDown (self):
         self.tb = None
 
     def test_001_t (self):
         input1 = (10, 0, 1, 2)
-
         #input1= [0, 0, 0, 0, 1, 0, 1, 0]
         #input2 = [ 0, 0, 0, 0, 0, 0, 0, 0]
         #input3 = [ 0, 0, 0, 0, 0, 0, 0, 1]
@@ -50,17 +51,51 @@ class qa_pn9_whitening (gr_unittest.TestCase):
         #output3 = [0, 0, 0, 1, 1, 1, 0, 0]
         #output4 = [1, 0, 0, 1, 1, 0, 0, 0]
 
-        res_data = output1
+        src = blocks.vector_source_b(input1)
+        src_tagged = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, len(input1), self.tsb_key)
+        pn9 = pn9_whitening(False)
+        dst = blocks.tsb_vector_sink_b(tsb_key = self.tsb_key)
+
+        self.tb.connect(src, src_tagged, pn9, dst)
+        self.tb.run()
+
+        self.assertEquals(dst.data()[0], output1)
+
+    def test_with_reset (self):
+        input1 = (10, 0, 1, 2)
+        #input1= [0, 0, 0, 0, 1, 0, 1, 0]
+        #input2 = [ 0, 0, 0, 0, 0, 0, 0, 0]
+        #input3 = [ 0, 0, 0, 0, 0, 0, 0, 1]
+        #input4 = [0, 0, 0, 0, 0, 0, 1, 0]
+
+        output1 = (245,225, 28, 152)
+        #output1 = [1, 1, 1, 1, 0, 1, 0, 1]
+        #output2 = [1, 1, 1, 0, 0, 0, 0, 1]
+        #output3 = [0, 0, 0, 1, 1, 1, 0, 0]
+        #output4 = [1, 0, 0, 1, 1, 0, 0, 0]
 
         src = blocks.vector_source_b(input1)
-        pn9 = pn9_whitening()
-        dst = blocks.vector_sink_b()
+        src.set_max_noutput_items(2)
+        src.set_min_output_buffer(2)
+        src.set_max_output_buffer(2)
 
-        self.tb.connect(src, pn9, dst)
-        self.tb.run(1)
+        src_tagged = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, len(input1), self.tsb_key)
+        src_tagged.set_max_noutput_items(2)
+        src_tagged.set_min_output_buffer(2)
+        src_tagged.set_max_output_buffer(2)
 
-        result_data = dst.data()
-        self.assertEquals(result_data, res_data)
+
+        pn9 = pn9_whitening(True)
+
+
+        dst = blocks.tsb_vector_sink_b(tsb_key = self.tsb_key)
+
+
+        self.tb.connect(src, src_tagged, pn9, dst)
+        self.tb.run()
+
+        self.assertEquals(dst.data()[0], output1)
+
 
 
 if __name__ == '__main__':
