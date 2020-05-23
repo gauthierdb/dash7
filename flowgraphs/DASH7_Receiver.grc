@@ -1732,7 +1732,7 @@ class blk(gr.basic_block):  # use of basic block so that output and input dont h
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2008, 452)</value>
+      <value>(2048, 452)</value>
     </param>
     <param>
       <key>_rotation</key>
